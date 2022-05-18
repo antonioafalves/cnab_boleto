@@ -1,18 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.orionsoft.cnab.boleto.sicoob.remessa;
 
 import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 import br.com.orionsoft.cnab.core.annotation.Registro;
 
-/**
- *
- * @author antonio
- */
 @Registro
 public class SegmentoQ {
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 7)
