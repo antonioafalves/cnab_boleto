@@ -6,8 +6,8 @@ import br.com.orionsoft.cnab.core.annotation.Registro;
 import br.com.orionsoft.cnab.core.annotation.SubRegistro;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 @Registro
@@ -39,7 +39,7 @@ public class SegmentoP {
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 15)
     private String numeroDocumentoCobranca;
     @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
-    private Calendar dataVencimentoTitulo;
+    private LocalDate dataVencimentoTitulo;
     @Campo(formato = FormatoCampo.DECIMAL, tamanho = 15)
     private BigDecimal valorDocumento;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
@@ -49,7 +49,7 @@ public class SegmentoP {
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 2)
     private final String brancos4 = "";
     @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
-    private Calendar dataEmissaoTitulo;
+    private LocalDate dataEmissaoTitulo;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
     private TipoMora tipoMora;
     @Campo(formato = FormatoCampo.DECIMAL, tamanho = 15)
@@ -57,7 +57,7 @@ public class SegmentoP {
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 9)
     private final Integer zeros3 = 0;
     @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
-    private Calendar dataLimiteDesconto;
+    private LocalDate dataLimiteDesconto;
     @Campo(formato = FormatoCampo.DECIMAL, tamanho = 15)
     private BigDecimal valorDesconto;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 15)
@@ -200,7 +200,7 @@ public class SegmentoP {
         this.numeroDocumentoCobranca = numeroDocumentoCobranca;
     }
 
-    public void setDataVencimentoTitulo(Calendar dataVencimentoTitulo) {
+    public void setDataVencimentoTitulo(LocalDate dataVencimentoTitulo) {
         this.dataVencimentoTitulo = dataVencimentoTitulo;
     }
 
@@ -212,7 +212,7 @@ public class SegmentoP {
         this.identificacaoTituloAceite = identificacaoTituloAceite;
     }
 
-    public void setDataEmissaoTitulo(Calendar dataEmissaoTitulo) {
+    public void setDataEmissaoTitulo(LocalDate dataEmissaoTitulo) {
         this.dataEmissaoTitulo = dataEmissaoTitulo;
     }
 
@@ -224,7 +224,7 @@ public class SegmentoP {
         this.valorJurosMora = valorJurosMora;
     }
 
-    public void setDataLimiteDesconto(Calendar dataLimiteDesconto) {
+    public void setDataLimiteDesconto(LocalDate dataLimiteDesconto) {
         this.dataLimiteDesconto = dataLimiteDesconto;
     }
 
@@ -304,7 +304,7 @@ public class SegmentoP {
         return numeroDocumentoCobranca;
     }
 
-    public Calendar getDataVencimentoTitulo() {
+    public LocalDate getDataVencimentoTitulo() {
         return dataVencimentoTitulo;
     }
 
@@ -324,7 +324,7 @@ public class SegmentoP {
         return brancos4;
     }
 
-    public Calendar getDataEmissaoTitulo() {
+    public LocalDate getDataEmissaoTitulo() {
         return dataEmissaoTitulo;
     }
 
@@ -340,7 +340,7 @@ public class SegmentoP {
         return zeros3;
     }
 
-    public Calendar getDataLimiteDesconto() {
+    public LocalDate getDataLimiteDesconto() {
         return dataLimiteDesconto;
     }
 

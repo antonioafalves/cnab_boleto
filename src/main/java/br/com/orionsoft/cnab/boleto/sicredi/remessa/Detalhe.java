@@ -7,7 +7,7 @@ import br.com.orionsoft.cnab.core.annotation.Registro;
 import br.com.orionsoft.cnab.core.annotation.SubRegistro;
 
 import java.math.BigDecimal;
-import java.util.Calendar;
+import java.time.LocalDate;
 
 @Registro
 public class Detalhe {
@@ -35,7 +35,7 @@ public class Detalhe {
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 6)
     private final String filler3 = "";
     @Campo(formato = FormatoCampo.DATA_AAAAMMDD, tamanho = 8)
-    private Calendar dataInstrucao;
+    private LocalDate dataInstrucao;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
     private CampoAlterado campoAlterado;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
@@ -61,7 +61,7 @@ public class Detalhe {
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 10)
     private String seuNumero;
     @Campo(formato = FormatoCampo.DATA_DDMMAA, tamanho = 6)
-    private Calendar dataVencimento;
+    private LocalDate dataVencimento;
     @Campo(formato = FormatoCampo.DECIMAL, tamanho = 13)
     private BigDecimal valorTitulo;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 9)
@@ -71,7 +71,7 @@ public class Detalhe {
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
     private AceiteTitulo aceiteTitulo;
     @Campo(formato = FormatoCampo.DATA_DDMMAA, tamanho = 6)
-    private Calendar dataEmissao;
+    private LocalDate dataEmissao;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
     private InstrucaoProtesto instrucaoProtestoAutomatico;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
@@ -79,7 +79,7 @@ public class Detalhe {
     @Campo(formato = FormatoCampo.DECIMAL, tamanho = 13)
     private BigDecimal valorJurosDiaAtraso;
     @Campo(formato = FormatoCampo.DATA_DDMMAA, tamanho = 6)
-    private Calendar dataLimiteConcessaoDesconto;
+    private LocalDate dataLimiteConcessaoDesconto;
     @Campo(formato = FormatoCampo.DECIMAL, tamanho = 13)
     private BigDecimal valorDesconto;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 13)
@@ -266,7 +266,7 @@ public class Detalhe {
         this.nossoNumeroSicredi = nossoNumeroSicredi;
     }
 
-    public void setDataInstrucao(Calendar dataInstrucao) {
+    public void setDataInstrucao(LocalDate dataInstrucao) {
         this.dataInstrucao = dataInstrucao;
     }
 
@@ -302,7 +302,7 @@ public class Detalhe {
         this.seuNumero = seuNumero;
     }
 
-    public void setDataVencimento(Calendar dataVencimento) {
+    public void setDataVencimento(LocalDate dataVencimento) {
         this.dataVencimento = dataVencimento;
     }
 
@@ -318,7 +318,7 @@ public class Detalhe {
         this.aceiteTitulo = aceiteTitulo;
     }
 
-    public void setDataEmissao(Calendar dataEmissao) {
+    public void setDataEmissao(LocalDate dataEmissao) {
         this.dataEmissao = dataEmissao;
     }
 
@@ -334,7 +334,7 @@ public class Detalhe {
         this.valorJurosDiaAtraso = valorJurosDiaAtraso;
     }
 
-    public void setDataLimiteConcessaoDesconto(Calendar dataLimiteConcessaoDesconto) {
+    public void setDataLimiteConcessaoDesconto(LocalDate dataLimiteConcessaoDesconto) {
         this.dataLimiteConcessaoDesconto = dataLimiteConcessaoDesconto;
     }
 
@@ -426,7 +426,7 @@ public class Detalhe {
         return filler3;
     }
 
-    public Calendar getDataInstrucao() {
+    public LocalDate getDataInstrucao() {
         return dataInstrucao;
     }
 
@@ -474,7 +474,7 @@ public class Detalhe {
         return seuNumero;
     }
 
-    public Calendar getDataVencimento() {
+    public LocalDate getDataVencimento() {
         return dataVencimento;
     }
 
@@ -494,7 +494,7 @@ public class Detalhe {
         return aceiteTitulo.value;
     }
 
-    public Calendar getDataEmissao() {
+    public LocalDate getDataEmissao() {
         return dataEmissao;
     }
 
@@ -510,7 +510,7 @@ public class Detalhe {
         return valorJurosDiaAtraso;
     }
 
-    public Calendar getDataLimiteConcessaoDesconto() {
+    public LocalDate getDataLimiteConcessaoDesconto() {
         return dataLimiteConcessaoDesconto;
     }
 
