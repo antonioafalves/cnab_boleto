@@ -3,8 +3,12 @@ package br.com.orionsoft.cnab.boleto.sicredi.remessa;
 import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 import br.com.orionsoft.cnab.core.annotation.Registro;
+import lombok.Getter;
+import lombok.Setter;
 
 @Registro
+@Getter
+@Setter
 public class Trailer {
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
     private final Integer identificacaoRegistroTrailer = 9;
@@ -18,37 +22,4 @@ public class Trailer {
     private final String filler = "";
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
     private Integer numeroSequencialRegistro;
-
-    public Integer getIdentificacaoRegistroTrailer() {
-        return identificacaoRegistroTrailer;
-    }
-
-    public Integer getIdentificacaoArquivoRemessa() {
-        return identificacaoArquivoRemessa;
-    }
-
-    public Integer getNumeroSicredi() {
-        return numeroSicredi;
-    }
-
-    public String getCodigoCedente() {
-        return codigoCedente;
-    }
-
-    public String getFiller() {
-        return filler;
-    }
-
-    public Integer getNumeroSequencialRegistro() {
-        return numeroSequencialRegistro;
-    }
-
-    public void setCodigoCedente(String codigoCedente) {
-        this.codigoCedente = codigoCedente;
-    }
-
-    public void setNumeroSequencialRegistro(Integer numeroSequencialRegistro) {
-        this.numeroSequencialRegistro = numeroSequencialRegistro;
-    }
-    
 }

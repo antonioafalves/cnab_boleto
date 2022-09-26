@@ -3,10 +3,14 @@ package br.com.orionsoft.cnab.boleto.sicredi.remessa;
 import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 import br.com.orionsoft.cnab.core.annotation.Registro;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
 @Registro
+@Getter
+@Setter
 public class Header {
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
     private final Integer identificacaoRegistro = 0;
@@ -40,89 +44,4 @@ public class Header {
     private final String versaoSistema = "2.00";
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
     private Integer numeroSequencialRegistro;
-
-    public Integer getIdentificacaoRegistro() {
-        return identificacaoRegistro;
-    }
-
-    public Integer getIdentificacaoArquivoRemessa() {
-        return identificacaoArquivoRemessa;
-    }
-
-    public String getLiteralRemessa() {
-        return literalRemessa;
-    }
-
-    public Integer getCodigoServicoCobranca() {
-        return codigoServicoCobranca;
-    }
-
-    public String getLiteralCobranca() {
-        return literalCobranca;
-    }
-
-    public String getCodigoCedente() {
-        return codigoCedente;
-    }
-
-    public String getCnpj() {
-        return cnpj;
-    }
-
-    public String getFiller1() {
-        return filler1;
-    }
-
-    public Integer getNumeroSicredi() {
-        return numeroSicredi;
-    }
-
-    public String getLiteralSicredi() {
-        return literalSicredi;
-    }
-
-    public LocalDate getDataGravacaoArquivo() {
-        return dataGravacaoArquivo;
-    }
-
-    public String getFiller2() {
-        return filler2;
-    }
-
-    public Integer getNumeroRemessa() {
-        return numeroRemessa;
-    }
-
-    public String getFiller3() {
-        return filler3;
-    }
-
-    public String getVersaoSistema() {
-        return versaoSistema;
-    }
-
-    public Integer getNumeroSequencialRegistro() {
-        return numeroSequencialRegistro;
-    }
-
-    public void setCodigoCedente(String codigoCedente) {
-        this.codigoCedente = codigoCedente;
-    }
-
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
-    }
-
-    public void setDataGravacaoArquivo(LocalDate dataGravacaoArquivo) {
-        this.dataGravacaoArquivo = dataGravacaoArquivo;
-    }
-
-    public void setNumeroRemessa(Integer numeroRemessa) {
-        this.numeroRemessa = numeroRemessa;
-    }
-
-    public void setNumeroSequencialRegistro(Integer numeroSequencialRegistro) {
-        this.numeroSequencialRegistro = numeroSequencialRegistro;
-    }
-    
 }

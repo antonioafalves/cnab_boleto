@@ -1,387 +1,101 @@
 package br.com.orionsoft.cnab.boleto.sicoob.remessa;
 
+import br.com.orionsoft.cnab.boleto.sicoob.tipo.*;
 import br.com.orionsoft.cnab.core.FormatoCampo;
 import br.com.orionsoft.cnab.core.annotation.Campo;
 import br.com.orionsoft.cnab.core.annotation.Registro;
-import br.com.orionsoft.cnab.core.annotation.SubRegistro;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
 @Registro
+@Getter
+@Setter
 public class SegmentoP {
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 7)
-    private final Integer zeros1 = 0;
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    private final String banco = "756";
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 4)
+    private Integer lote;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
-    private final Integer registroDetalhe = 3;
+    private final Integer registro = 3;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 5)
-    private Integer numeroSequencialRegistroLote;
+    private Integer numeroRegistro;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
-    private final String codigoSegmentoRegistroDetalhe = "P";
+    private final String segmento = "P";
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
-    private final String brancos1 = "";
+    private final String cnab1 = "";
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
-    private CodigoInstrucao codigoInstrucao;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 23)
-    private final String brancos2 = "";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 17)
+    private CodigoMovimentoRemessa codigoMovimentoRemessa;
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 5)
+    private String codigoAgencia;
+    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    private String dvAgencia;
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 12)
+    private String numeroConta;
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    private String dvConta;
+    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    private final String dv = "";
+    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 20)
     private String nossoNumero;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
-    private final Integer codigoCarteira = 9;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
-    private TipoDocumento tipoDocumento;
+    private String carteira;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
-    private IdentificacaoEmissaoBloqueto identificacaoEmissaoBloqueto;
+    private final Integer cadastramento = 0;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
-    private final String brancos3 = "";
+    private final String documento = "";
+    @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 1)
+    private EmissaoBoleto emissaoBoleto;
+    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    private DistribuicaoBoleto distribuicaoBoleto;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 15)
-    private String numeroDocumentoCobranca;
+    private String numeroDocumento;
     @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
-    private LocalDate dataVencimentoTitulo;
-    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 15)
-    private BigDecimal valorDocumento;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
-    private final Integer zeros2 = 0;
+    private LocalDate vencimento;
+    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 13)
+    private BigDecimal valorTitulo;
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 5)
+    private final Integer agenciaCobradora = 0;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
-    private IdentificacaoTituloAceite identificacaoTituloAceite;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 2)
-    private final String brancos4 = "";
+    private final String dvAgenciaCobradora = "";
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
+    private EspecieTitulo especieTitulo;
+    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    private AceiteTitulo aceiteTitulo;
     @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
     private LocalDate dataEmissaoTitulo;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
-    private TipoMora tipoMora;
-    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 15)
-    private BigDecimal valorJurosMora;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 9)
-    private final Integer zeros3 = 0;
+    private CodigoJurosMora codigoJurosMora;
     @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
-    private LocalDate dataLimiteDesconto;
-    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 15)
-    private BigDecimal valorDesconto;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 15)
-    private final String filler = "";
-    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 15)
+    private LocalDate dataJurosMora;
+    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 13)
+    private BigDecimal jurosMora;
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    private CodigoDesconto codigoDesconto1;
+    @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
+    private LocalDate dataDesconto1;
+    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 13)
+    private BigDecimal valorDesconto1;
+    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 13)
+    private BigDecimal valorIOF;
+    @Campo(formato = FormatoCampo.DECIMAL, tamanho = 13)
     private BigDecimal valorAbatimento;
     @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 25)
-    private String controleBeneficiario;
+    private String usoEmpresaBeneficiario;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
-    private ProtestoAutomatico protestoAutomatico;
+    private CodigoProtesto codigoProtesto;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
-    private Integer numeroDiasProtesto;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 4)
-    private final Integer zeros4 = 0;
+    private Integer prazoParaProtesto;
+    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    private final Integer codigoBaixaDevolucao = 0;
+    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 3)
+    private final String prazoBaixaDevolucao = "";
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
     private final Integer codigoMoeda = 9;
     @Campo(formato = FormatoCampo.NUMERICO, tamanho = 10)
-    private Integer numeroControleOperacaoCredito;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
-    private final Integer zero5 = 0;
-    
-    @SubRegistro
-    private List<SegmentoQ> segmentosQ;
-    
-    public enum ProtestoAutomatico {
-        NAO(0),
-        SIM(1);
-        
-        private final Integer value;
-
-        private ProtestoAutomatico(Integer value) {
-            this.value = value;
-        }
-    }
-  
-    public enum TipoMora {
-        ISENTO(1),
-        VALOR(2),
-        PORCENTAGEM(3);
-        
-        private final Integer value;
-
-        private TipoMora(Integer value) {
-            this.value = value;
-        }
-    }
-    
-    public enum CodigoInstrucao {
-        ENTRADA_TITULOS(1),
-        PEDIDO_BAIXA(2),
-        CONCESSAO_ABATIMENTO(4),
-        CANCELAMENTO_ABATIMENTO(5),
-        ALTERACAO_VENCIMENTO(6),
-        CONCESSAO_DESCONTO(7),
-        CANCELAMENTO_DESCONTO(8),
-        PROTESTAR(9),
-        CANCELA_SUSTACAO_INSTRUCAO_PROTESTO(10),
-        ALTERACAO_OUTROS_DADOS(31);
-        
-        public final Integer value;
-
-        private CodigoInstrucao(Integer value) {
-            this.value = value;
-        }
-    }
-    
-    /**
-     * @author Antonio Alves
-     * @version 1.0
-     * DM Duplicata Mercantil
-     */
-    public enum TipoDocumento {
-        DM(2),
-        DS(4),
-        LC(7),
-        NP(12),
-        RC(17),
-        ND(19),
-        NS(20),
-        OUTROS(99);
-        
-        private final Integer value;
-
-        private TipoDocumento(Integer value) {
-            this.value = value;
-        }
-        
-    }
-    
-    public enum IdentificacaoEmissaoBloqueto {
-        BANCO_EMITE(1),
-        BENEFICIARIO_EMITE(2);
-        
-        private final Integer value;
-        
-        private IdentificacaoEmissaoBloqueto(Integer value) {
-            this.value = value;
-        }
-    }
-    
-    public enum IdentificacaoTituloAceite {
-        ACEITE("A"),
-        NAO_ACEITE("N");
-        
-        private final String value;
-
-        private IdentificacaoTituloAceite(String value) {
-            this.value = value;
-        }
-    }
-
-    public List<SegmentoQ> getSegmentosQ() {
-        if (segmentosQ == null) {
-            segmentosQ = new ArrayList<>();
-        }
-        return segmentosQ;
-    }
-
-    public void setNumeroSequencialRegistroLote(Integer numeroSequencialRegistroLote) {
-        this.numeroSequencialRegistroLote = numeroSequencialRegistroLote;
-    }
-
-    public void setCodigoInstrucao(CodigoInstrucao codigoInstrucao) {
-        this.codigoInstrucao = codigoInstrucao;
-    }
-
-    public void setNossoNumero(String nossoNumero) {
-        this.nossoNumero = nossoNumero;
-    }
-
-    public void setTipoDocumento(TipoDocumento tipoDocumento) {
-        this.tipoDocumento = tipoDocumento;
-    }
-
-    public void setIdentificacaoEmissaoBloqueto(IdentificacaoEmissaoBloqueto identificacaoEmissaoBloqueto) {
-        this.identificacaoEmissaoBloqueto = identificacaoEmissaoBloqueto;
-    }
-
-    public void setNumeroDocumentoCobranca(String numeroDocumentoCobranca) {
-        this.numeroDocumentoCobranca = numeroDocumentoCobranca;
-    }
-
-    public void setDataVencimentoTitulo(LocalDate dataVencimentoTitulo) {
-        this.dataVencimentoTitulo = dataVencimentoTitulo;
-    }
-
-    public void setValorDocumento(BigDecimal valorDocumento) {
-        this.valorDocumento = valorDocumento;
-    }
-
-    public void setIdentificacaoTituloAceite(IdentificacaoTituloAceite identificacaoTituloAceite) {
-        this.identificacaoTituloAceite = identificacaoTituloAceite;
-    }
-
-    public void setDataEmissaoTitulo(LocalDate dataEmissaoTitulo) {
-        this.dataEmissaoTitulo = dataEmissaoTitulo;
-    }
-
-    public void setTipoMora(TipoMora tipoMora) {
-        this.tipoMora = tipoMora;
-    }
-
-    public void setValorJurosMora(BigDecimal valorJurosMora) {
-        this.valorJurosMora = valorJurosMora;
-    }
-
-    public void setDataLimiteDesconto(LocalDate dataLimiteDesconto) {
-        this.dataLimiteDesconto = dataLimiteDesconto;
-    }
-
-    public void setValorDesconto(BigDecimal valorDesconto) {
-        this.valorDesconto = valorDesconto;
-    }
-
-    public void setValorAbatimento(BigDecimal valorAbatimento) {
-        this.valorAbatimento = valorAbatimento;
-    }
-
-    public void setControleBeneficiario(String controleBeneficiario) {
-        this.controleBeneficiario = controleBeneficiario;
-    }
-
-    public void setProtestoAutomatico(ProtestoAutomatico protestoAutomatico) {
-        this.protestoAutomatico = protestoAutomatico;
-    }
-
-    public void setNumeroDiasProtesto(Integer numeroDiasProtesto) {
-        this.numeroDiasProtesto = numeroDiasProtesto;
-    }
-
-    public void setNumeroControleOperacaoCredito(Integer numeroControleOperacaoCredito) {
-        this.numeroControleOperacaoCredito = numeroControleOperacaoCredito;
-    }
-
-    public Integer getZeros1() {
-        return zeros1;
-    }
-
-    public Integer getRegistroDetalhe() {
-        return registroDetalhe;
-    }
-
-    public Integer getNumeroSequencialRegistroLote() {
-        return numeroSequencialRegistroLote;
-    }
-
-    public String getCodigoSegmentoRegistroDetalhe() {
-        return codigoSegmentoRegistroDetalhe;
-    }
-
-    public String getBrancos1() {
-        return brancos1;
-    }
-
-    public Integer getCodigoInstrucao() {
-        return codigoInstrucao.value;
-    }
-
-    public String getBrancos2() {
-        return brancos2;
-    }
-
-    public String getNossoNumero() {
-        return nossoNumero;
-    }
-
-    public Integer getCodigoCarteira() {
-        return codigoCarteira;
-    }
-
-    public Integer getTipoDocumento() {
-        return tipoDocumento.value;
-    }
-
-    public Integer getIdentificacaoEmissaoBloqueto() {
-        return identificacaoEmissaoBloqueto.value;
-    }
-
-    public String getBrancos3() {
-        return brancos3;
-    }
-
-    public String getNumeroDocumentoCobranca() {
-        return numeroDocumentoCobranca;
-    }
-
-    public LocalDate getDataVencimentoTitulo() {
-        return dataVencimentoTitulo;
-    }
-
-    public BigDecimal getValorDocumento() {
-        return valorDocumento;
-    }
-
-    public Integer getZeros2() {
-        return zeros2;
-    }
-
-    public String getIdentificacaoTituloAceite() {
-        return identificacaoTituloAceite.value;
-    }
-
-    public String getBrancos4() {
-        return brancos4;
-    }
-
-    public LocalDate getDataEmissaoTitulo() {
-        return dataEmissaoTitulo;
-    }
-
-    public Integer getTipoMora() {
-        return tipoMora.value;
-    }
-
-    public BigDecimal getValorJurosMora() {
-        return valorJurosMora;
-    }
-
-    public Integer getZeros3() {
-        return zeros3;
-    }
-
-    public LocalDate getDataLimiteDesconto() {
-        return dataLimiteDesconto;
-    }
-
-    public BigDecimal getValorDesconto() {
-        return valorDesconto;
-    }
-
-    public String getFiller() {
-        return filler;
-    }
-
-    public BigDecimal getValorAbatimento() {
-        return valorAbatimento;
-    }
-
-    public String getControleBeneficiario() {
-        return controleBeneficiario;
-    }
-
-    public Integer getProtestoAutomatico() {
-        return protestoAutomatico.value;
-    }
-
-    public Integer getNumeroDiasProtesto() {
-        return numeroDiasProtesto;
-    }
-
-    public Integer getZeros4() {
-        return zeros4;
-    }
-
-    public Integer getCodigoMoeda() {
-        return codigoMoeda;
-    }
-
-    public Integer getNumeroControleOperacaoCredito() {
-        return numeroControleOperacaoCredito;
-    }
-
-    public Integer getZero5() {
-        return zero5;
-    }
-    
+    private final Integer numeroContrato = 0;
+    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    private final String cnab2 = "";
 }
