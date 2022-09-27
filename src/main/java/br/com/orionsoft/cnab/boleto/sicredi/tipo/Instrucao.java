@@ -1,5 +1,9 @@
 package br.com.orionsoft.cnab.boleto.sicredi.tipo;
 
+import lombok.Getter;
+
+@SuppressWarnings("unused")
+@Getter
 public enum Instrucao {
     CADASTRO_TITULO(1, 2, 3),
     PEDIDO_BAIXA(2, 9, 27),
@@ -11,9 +15,9 @@ public enum Instrucao {
     SUSTAR_PROTESTO_MANTER_CARTEIRA(19, 20, 32),
     ALTERACAO_OUTROS_DADOS(31, 33, 30);
 
-    private final Integer instrucao;
-    private final Integer confirmacao;
-    private final Integer rejeicao;
+    final Integer instrucao;
+    final Integer confirmacao;
+    final Integer rejeicao;
 
     Instrucao(Integer instrucao, Integer confirmacao, Integer rejeicao) {
         this.instrucao = instrucao;

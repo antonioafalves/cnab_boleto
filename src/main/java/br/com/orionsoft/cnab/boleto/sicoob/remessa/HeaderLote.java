@@ -1,62 +1,62 @@
 package br.com.orionsoft.cnab.boleto.sicoob.remessa;
 
 import br.com.orionsoft.cnab.boleto.sicoob.tipo.TipoInscricao;
-import br.com.orionsoft.cnab.core.FormatoCampo;
-import br.com.orionsoft.cnab.core.annotation.Campo;
-import br.com.orionsoft.cnab.core.annotation.Registro;
+import br.com.orionsoft.cnab.core.Pattern;
+import br.com.orionsoft.cnab.core.annotation.Field;
+import br.com.orionsoft.cnab.core.annotation.Record;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Registro
+@Record
 @Getter
 @Setter
 public class HeaderLote {
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private final String banco = "756";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 4)
+    @Field(pattern = Pattern.NUMERIC, size = 4)
     private Integer lote;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private final String registro = "1";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String operacao = "R";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
+    @Field(pattern = Pattern.NUMERIC, size = 2)
     private final String servico = "01";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 2)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private final String cnab1 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private final String layoutLote = "040";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String cnab2 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private TipoInscricao tipoInscricaoEmpresa;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 15)
+    @Field(pattern = Pattern.NUMERIC, size = 15)
     private String numeroInscricaoEmpresa;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 20)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 20)
     private final String convenio = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 5)
+    @Field(pattern = Pattern.NUMERIC, size = 5)
     private String codigoAgencia;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private String dvAgencia;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 12)
+    @Field(pattern = Pattern.NUMERIC, size = 12)
     private String numeroConta;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private String dvConta;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String dv = "";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 30)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 30)
     private String nomeEmpresa;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 40)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 40)
     private final String informacao1 = "";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 40)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 40)
     private final String informacao2 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 8)
+    @Field(pattern = Pattern.NUMERIC, size = 8)
     private Integer numeroRemessaRetorno;
-    @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
+    @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataGravacao;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 8)
+    @Field(pattern = Pattern.NUMERIC, size = 8)
     private final String dataCredito = "00000000";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 33)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 33)
     private final String cnab = "";
 }

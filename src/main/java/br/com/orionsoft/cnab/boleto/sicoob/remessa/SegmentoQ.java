@@ -2,58 +2,58 @@ package br.com.orionsoft.cnab.boleto.sicoob.remessa;
 
 import br.com.orionsoft.cnab.boleto.sicoob.tipo.CodigoMovimentoRemessa;
 import br.com.orionsoft.cnab.boleto.sicoob.tipo.TipoInscricao;
-import br.com.orionsoft.cnab.core.FormatoCampo;
-import br.com.orionsoft.cnab.core.annotation.Campo;
-import br.com.orionsoft.cnab.core.annotation.Registro;
+import br.com.orionsoft.cnab.core.Pattern;
+import br.com.orionsoft.cnab.core.annotation.Field;
+import br.com.orionsoft.cnab.core.annotation.Record;
 import lombok.Getter;
 import lombok.Setter;
 
-@Registro
+@Record
 @Getter
 @Setter
 public class SegmentoQ {
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private final String banco = "756";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 4)
+    @Field(pattern = Pattern.NUMERIC, size = 4)
     private Integer lote;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private final Integer registro = 3;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 5)
+    @Field(pattern = Pattern.NUMERIC, size = 5)
     private Integer numeroRegistro;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String segmento = "Q";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String cnab1 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 2)
+    @Field(pattern = Pattern.NUMERIC, size = 2)
     private CodigoMovimentoRemessa codigoMovimentoRemessa;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private TipoInscricao tipoInscricaoPagador;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 15)
+    @Field(pattern = Pattern.NUMERIC, size = 15)
     private String numeroInscricaoPagador;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 40)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 40)
     private String nomePagador;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 40)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 40)
     private String enderecoPagador;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 15)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 15)
     private String bairroPagador;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 5)
+    @Field(pattern = Pattern.NUMERIC, size = 5)
     private String cepPagador;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private String sufixoCepPagador;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 15)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 15)
     private String cidadePagador;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 2)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private String ufPagador;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private TipoInscricao tipoInscricaoSacadorAvalista;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 15)
+    @Field(pattern = Pattern.NUMERIC, size = 15)
     private String numeroInscricaoSacadorAvalista;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 40)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 40)
     private String nomeSacadorAvalista;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private final String codigoBancoCorrespondente = "000";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 20)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 20)
     private final String nossoNumeroBancoCorrespondente = "000";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 8)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 8)
     private final String cnab2 = "";
 }

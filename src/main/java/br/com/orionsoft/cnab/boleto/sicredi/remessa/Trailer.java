@@ -1,25 +1,25 @@
 package br.com.orionsoft.cnab.boleto.sicredi.remessa;
 
-import br.com.orionsoft.cnab.core.FormatoCampo;
-import br.com.orionsoft.cnab.core.annotation.Campo;
-import br.com.orionsoft.cnab.core.annotation.Registro;
+import br.com.orionsoft.cnab.core.Pattern;
+import br.com.orionsoft.cnab.core.annotation.Field;
+import br.com.orionsoft.cnab.core.annotation.Record;
 import lombok.Getter;
 import lombok.Setter;
 
-@Registro
+@Record
 @Getter
 @Setter
 public class Trailer {
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private final Integer identificacaoRegistroTrailer = 9;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private final Integer identificacaoArquivoRemessa = 1;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private final Integer numeroSicredi = 748;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 5)
+    @Field(pattern = Pattern.NUMERIC, size = 5)
     private String codigoCedente;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 384)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 384)
     private final String filler = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
+    @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer numeroSequencialRegistro;
 }

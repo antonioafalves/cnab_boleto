@@ -1,5 +1,9 @@
 package br.com.orionsoft.cnab.boleto.sicredi.tipo;
 
+import lombok.Getter;
+
+@SuppressWarnings("unused")
+@Getter
 public enum EspecieDocumento {
     DUPLICATA_MERCANTIL_INDICACAO("A"),
     DUPLICATA_RURAL("B"),
@@ -12,7 +16,7 @@ public enum EspecieDocumento {
     DUPLICATA_SERVICO_INDICACAO("J"),
     OUTROS("K");
 
-    private final String value;
+    final String value;
 
     EspecieDocumento(String value) {
         this.value = value;

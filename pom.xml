@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.orionsoft</groupId>
     <artifactId>CNAB_boleto</artifactId>
-    <version>1.1.1</version>
+    <version>1.2.1</version>
     <name>CNAB_boleto</name>
     <description>CNAB Boleto</description>
     <properties>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>br.com.orionsoft</groupId>
             <artifactId>CNAB_core</artifactId>
-            <version>1.1.1</version>
+            <version>2.0.0</version>
         </dependency>
     </dependencies>
 

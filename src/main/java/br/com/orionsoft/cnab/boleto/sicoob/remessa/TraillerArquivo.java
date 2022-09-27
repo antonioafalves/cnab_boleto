@@ -1,29 +1,29 @@
 package br.com.orionsoft.cnab.boleto.sicoob.remessa;
 
-import br.com.orionsoft.cnab.core.FormatoCampo;
-import br.com.orionsoft.cnab.core.annotation.Campo;
-import br.com.orionsoft.cnab.core.annotation.Registro;
+import br.com.orionsoft.cnab.core.Pattern;
+import br.com.orionsoft.cnab.core.annotation.Field;
+import br.com.orionsoft.cnab.core.annotation.Record;
 import lombok.Getter;
 import lombok.Setter;
 
-@Registro
+@Record
 @Getter
 @Setter
 public class TraillerArquivo {
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private final String banco = "756";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 4)
+    @Field(pattern = Pattern.NUMERIC, size = 4)
     private final String lote = "9999";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private final String registro = "9";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 9)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 9)
     private final String cnab1 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
+    @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer quantidadeLotes;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
+    @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer quantidadeRegistros;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
+    @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer quantidadeContas;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 205)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 205)
     private final String cnab2 = "";
 }

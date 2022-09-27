@@ -1,5 +1,9 @@
 package br.com.orionsoft.cnab.boleto.sicredi.tipo;
 
+import lombok.Getter;
+
+@SuppressWarnings("unused")
+@Getter
 public enum CampoAlterado {
     NENHUM(" "),
     DESCONTO("A"),
@@ -9,7 +13,7 @@ public enum CampoAlterado {
     CANCELAMENTO_PROTESTO_AUTOMATICO("E"),
     CARTEIRA_COBRANCA("F");
 
-    private final String value;
+    final String value;
 
     CampoAlterado(String value) {
         this.value = value;

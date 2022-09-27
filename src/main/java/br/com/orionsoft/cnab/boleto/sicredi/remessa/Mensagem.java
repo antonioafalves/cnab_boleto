@@ -1,35 +1,35 @@
 package br.com.orionsoft.cnab.boleto.sicredi.remessa;
 
-import br.com.orionsoft.cnab.core.FormatoCampo;
-import br.com.orionsoft.cnab.core.annotation.Campo;
-import br.com.orionsoft.cnab.core.annotation.Identificador;
-import br.com.orionsoft.cnab.core.annotation.Registro;
+import br.com.orionsoft.cnab.core.Pattern;
+import br.com.orionsoft.cnab.core.annotation.Field;
+import br.com.orionsoft.cnab.core.annotation.Identifier;
+import br.com.orionsoft.cnab.core.annotation.Record;
 import lombok.Getter;
 import lombok.Setter;
 
-@Registro
+@Record
 @Getter
 @Setter
 public class Mensagem {
-    @Identificador
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Identifier
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private final Integer identificacaoRegistro = 2;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 11)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 11)
     private final String filler1 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 9)
+    @Field(pattern = Pattern.NUMERIC, size = 9)
     private String nossoNumero;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 80)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 80)
     private String instrucao1;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 80)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 80)
     private String instrucao2;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 80)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 80)
     private String instrucao3;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 80)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 80)
     private String instrucao4;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 10)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 10)
     private String seuNumero;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 43)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 43)
     private final String filler2 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
+    @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer numeroSequencialRegistro;
 }

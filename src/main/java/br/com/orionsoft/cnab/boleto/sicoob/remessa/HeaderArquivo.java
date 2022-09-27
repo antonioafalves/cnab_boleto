@@ -1,63 +1,63 @@
 package br.com.orionsoft.cnab.boleto.sicoob.remessa;
 
 import br.com.orionsoft.cnab.boleto.sicoob.tipo.TipoInscricao;
-import br.com.orionsoft.cnab.core.FormatoCampo;
-import br.com.orionsoft.cnab.core.annotation.Campo;
-import br.com.orionsoft.cnab.core.annotation.Registro;
+import br.com.orionsoft.cnab.core.Pattern;
+import br.com.orionsoft.cnab.core.annotation.Field;
+import br.com.orionsoft.cnab.core.annotation.Record;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Registro
+@Record
 @Getter
 @Setter
 public class HeaderArquivo {
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private final Integer banco = 756;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 4)
+    @Field(pattern = Pattern.NUMERIC, size = 4)
     private final Integer lote = 0;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private final Integer registro = 0;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 9)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 9)
     private final String cnab1 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private TipoInscricao tipoInscricaoEmpresa;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 14)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 14)
     private String numeroInscricaoEmpresa;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 20)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 20)
     private final String convenio = "";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 5)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 5)
     private String codigoAgencia;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private String dvAgencia;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 12)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 12)
     private String numeroConta;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private String dvConta;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 30)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 30)
     private String nomeEmpresa;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 30)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 30)
     private final String nomeBanco = "SICOOB";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 10)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 10)
     private final String cnab2 = "";
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 1)
+    @Field(pattern = Pattern.NUMERIC, size = 1)
     private final Integer codigoArquivo = 1;
-    @Campo(formato = FormatoCampo.DATA_DDMMAAAA, tamanho = 8)
+    @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataGeracaoArquivo;
-    @Campo(formato = FormatoCampo.HORA)
+    @Field(pattern = Pattern.TIME)
     private LocalTime horaGeracaoArquivo;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 6)
+    @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer sequencialArquivo;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 3)
+    @Field(pattern = Pattern.NUMERIC, size = 3)
     private final Integer layoutArquivo = 81;
-    @Campo(formato = FormatoCampo.NUMERICO, tamanho = 5)
+    @Field(pattern = Pattern.NUMERIC, size = 5)
     private final Integer densidade = 0;
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 20)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 20)
     private final String reservadoBanco = "";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 20)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 20)
     private final String reservadoEmpresa = "";
-    @Campo(formato = FormatoCampo.ALFANUMERICO, tamanho = 29)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 29)
     private final String cnab3 = "";
 }
