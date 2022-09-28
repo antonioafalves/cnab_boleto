@@ -19,14 +19,14 @@ public class SegmentoP {
     @Field(pattern = Pattern.NUMERIC, size = 4)
     private Integer lote;
     @Field(pattern = Pattern.NUMERIC, size = 1)
-    private final Integer registro = 3;
+    private final String registro = "3";
     @Field(pattern = Pattern.NUMERIC, size = 5)
     private Integer numeroRegistro;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String segmento = "P";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String cnab1 = "";
-    @Field(pattern = Pattern.NUMERIC, size = 2)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private CodigoMovimentoRemessa codigoMovimentoRemessa;
     @Field(pattern = Pattern.NUMERIC, size = 5)
     private String codigoAgencia;
@@ -43,10 +43,10 @@ public class SegmentoP {
     @Field(pattern = Pattern.NUMERIC, size = 1)
     private String carteira;
     @Field(pattern = Pattern.NUMERIC, size = 1)
-    private final Integer cadastramento = 0;
+    private final String cadastramento = "0";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String documento = "";
-    @Field(pattern = Pattern.DATE_DDMMAAAA, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private EmissaoBoleto emissaoBoleto;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private DistribuicaoBoleto distribuicaoBoleto;
@@ -57,22 +57,22 @@ public class SegmentoP {
     @Field(pattern = Pattern.DECIMAL, size = 13)
     private BigDecimal valorTitulo;
     @Field(pattern = Pattern.NUMERIC, size = 5)
-    private final Integer agenciaCobradora = 0;
+    private final String agenciaCobradora = "00000";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String dvAgenciaCobradora = "";
-    @Field(pattern = Pattern.NUMERIC, size = 2)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private EspecieTitulo especieTitulo;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private AceiteTitulo aceiteTitulo;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataEmissaoTitulo;
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private CodigoJurosMora codigoJurosMora;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataJurosMora;
     @Field(pattern = Pattern.DECIMAL, size = 13)
     private BigDecimal jurosMora;
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private CodigoDesconto codigoDesconto1;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataDesconto1;
@@ -84,18 +84,18 @@ public class SegmentoP {
     private BigDecimal valorAbatimento;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 25)
     private String usoEmpresaBeneficiario;
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private CodigoProtesto codigoProtesto;
     @Field(pattern = Pattern.NUMERIC, size = 2)
     private Integer prazoParaProtesto;
     @Field(pattern = Pattern.NUMERIC, size = 1)
-    private final Integer codigoBaixaDevolucao = 0;
+    private final String codigoBaixaDevolucao = "0";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 3)
     private final String prazoBaixaDevolucao = "";
     @Field(pattern = Pattern.NUMERIC, size = 2)
-    private final Integer codigoMoeda = 9;
+    private final String codigoMoeda = "09";
     @Field(pattern = Pattern.NUMERIC, size = 10)
-    private final Integer numeroContrato = 0;
+    private final String numeroContrato = "0000000000";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String cnab2 = "";
 }

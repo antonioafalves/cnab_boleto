@@ -2,9 +2,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.orionsoft</groupId>
-    <artifactId>CNAB_boleto</artifactId>
-    <version>1.2.1</version>
-    <name>CNAB_boleto</name>
+    <artifactId>cnab_boleto</artifactId>
+    <version>1.2.3</version>
+    <name>cnab_boleto</name>
     <description>CNAB Boleto</description>
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
@@ -26,8 +26,8 @@
 
         <dependency>
             <groupId>br.com.orionsoft</groupId>
-            <artifactId>CNAB_core</artifactId>
-            <version>2.0.0</version>
+            <artifactId>cnab_core</artifactId>
+            <version>2.0.1</version>
         </dependency>
     </dependencies>
 

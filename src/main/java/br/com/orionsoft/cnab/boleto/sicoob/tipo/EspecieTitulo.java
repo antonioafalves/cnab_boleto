@@ -1,11 +1,17 @@
 package br.com.orionsoft.cnab.boleto.sicoob.tipo;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public enum EspecieTitulo {
     NF_NOTA_FISCAL("23");
 
-    private String value;
+    private final String value;
 
-    EspecieTitulo(String value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return value;
     }
 }

@@ -1,16 +1,18 @@
 package br.com.orionsoft.cnab.boleto.sicredi.tipo;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@SuppressWarnings("unused")
+@AllArgsConstructor
 @Getter
 public enum TipoPessoa {
-    PESSOA_FISICA(1),
-    PESSOA_JURIDICA(2);
+    PESSOA_FISICA("1"),
+    PESSOA_JURIDICA("2");
 
-    final Integer value;
+    private final String value;
 
-    TipoPessoa(Integer value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return value;
     }
 }

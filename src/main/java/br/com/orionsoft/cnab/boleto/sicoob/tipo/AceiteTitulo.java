@@ -1,12 +1,18 @@
 package br.com.orionsoft.cnab.boleto.sicoob.tipo;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public enum AceiteTitulo {
     ACEITE("A"),
     NAO_ACEITE("N");
 
-    private String value;
+    private final String value;
 
-    AceiteTitulo(String value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return value;
     }
 }

@@ -1,16 +1,18 @@
 package br.com.orionsoft.cnab.boleto.sicredi.tipo;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@SuppressWarnings("unused")
+@AllArgsConstructor
 @Getter
 public enum TipoDescontoJuros {
     VALOR("A"),
     PERCENTUAL("B");
 
-    final String value;
+    private final String value;
 
-    TipoDescontoJuros(String value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return value;
     }
 }

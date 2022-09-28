@@ -15,14 +15,14 @@ import java.time.LocalTime;
 @Setter
 public class HeaderArquivo {
     @Field(pattern = Pattern.NUMERIC, size = 3)
-    private final Integer banco = 756;
+    private final String banco = "756";
     @Field(pattern = Pattern.NUMERIC, size = 4)
-    private final Integer lote = 0;
+    private final String lote = "0000";
     @Field(pattern = Pattern.NUMERIC, size = 1)
-    private final Integer registro = 0;
+    private final String registro = "0";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 9)
     private final String cnab1 = "";
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private TipoInscricao tipoInscricaoEmpresa;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 14)
     private String numeroInscricaoEmpresa;
@@ -43,7 +43,7 @@ public class HeaderArquivo {
     @Field(pattern = Pattern.ALPHANUMERIC, size = 10)
     private final String cnab2 = "";
     @Field(pattern = Pattern.NUMERIC, size = 1)
-    private final Integer codigoArquivo = 1;
+    private final String codigoArquivo = "1";
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataGeracaoArquivo;
     @Field(pattern = Pattern.TIME)
@@ -51,9 +51,9 @@ public class HeaderArquivo {
     @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer sequencialArquivo;
     @Field(pattern = Pattern.NUMERIC, size = 3)
-    private final Integer layoutArquivo = 81;
+    private final String layoutArquivo = "081";
     @Field(pattern = Pattern.NUMERIC, size = 5)
-    private final Integer densidade = 0;
+    private final String densidade = "00000";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 20)
     private final String reservadoBanco = "";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 20)

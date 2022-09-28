@@ -1,5 +1,10 @@
 package br.com.orionsoft.cnab.boleto.sicoob.tipo;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@AllArgsConstructor
+@Getter
 public enum CodigoMovimentoRemessa {
     ENTRADA_TITULO("01"),
     SOLICITACAO_BAIXA("02"),
@@ -20,9 +25,10 @@ public enum CodigoMovimentoRemessa {
     NEGATIVACAO_SEM_PROTESTO("45"),
     CANCELAR_EXCLUIR_NEGATIVACAO("46");
 
-    private String value;
+    private final String value;
 
-    CodigoMovimentoRemessa(String value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return value;
     }
 }

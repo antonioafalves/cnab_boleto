@@ -61,7 +61,7 @@ public class Detalhe {
     private Double multaPagamentoAtraso;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 12)
     private final String filler6 = "";
-    @Field(pattern = Pattern.NUMERIC, size = 2)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private Instrucao instrucao;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 10)
     private String seuNumero;
@@ -77,7 +77,7 @@ public class Detalhe {
     private AceiteTitulo aceiteTitulo;
     @Field(pattern = Pattern.DATE_DDMMAA, size = 6)
     private LocalDate dataEmissao;
-    @Field(pattern = Pattern.NUMERIC, size = 2)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private InstrucaoProtesto instrucaoProtestoAutomatico;
     @Field(pattern = Pattern.NUMERIC, size = 2)
     private Integer numeroDiasProtestoAutomatico;
@@ -91,7 +91,7 @@ public class Detalhe {
     private final Integer filler8 = 0;
     @Field(pattern = Pattern.DECIMAL, size = 13)
     private BigDecimal valorAbatimento;
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private TipoPessoa tipoPessoa;
     @Field(pattern = Pattern.NUMERIC, size = 1)
     private final Integer filler9 = 0;

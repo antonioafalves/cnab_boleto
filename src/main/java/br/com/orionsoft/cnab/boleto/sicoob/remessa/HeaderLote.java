@@ -29,7 +29,7 @@ public class HeaderLote {
     private final String layoutLote = "040";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String cnab2 = "";
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private TipoInscricao tipoInscricaoEmpresa;
     @Field(pattern = Pattern.NUMERIC, size = 15)
     private String numeroInscricaoEmpresa;

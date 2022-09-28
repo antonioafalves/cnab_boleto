@@ -1,16 +1,18 @@
 package br.com.orionsoft.cnab.boleto.sicredi.tipo;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@SuppressWarnings("unused")
+@AllArgsConstructor
 @Getter
 public enum InstrucaoProtesto {
     NAO_PROTESTAR("00"),
     PROTESTAR_AUTO("06");
 
-    final String value;
+    private final String value;
 
-    InstrucaoProtesto(String value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return value;
     }
 }

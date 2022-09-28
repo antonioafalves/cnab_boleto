@@ -17,16 +17,16 @@ public class SegmentoQ {
     @Field(pattern = Pattern.NUMERIC, size = 4)
     private Integer lote;
     @Field(pattern = Pattern.NUMERIC, size = 1)
-    private final Integer registro = 3;
+    private final String registro = "3";
     @Field(pattern = Pattern.NUMERIC, size = 5)
     private Integer numeroRegistro;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String segmento = "Q";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String cnab1 = "";
-    @Field(pattern = Pattern.NUMERIC, size = 2)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private CodigoMovimentoRemessa codigoMovimentoRemessa;
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private TipoInscricao tipoInscricaoPagador;
     @Field(pattern = Pattern.NUMERIC, size = 15)
     private String numeroInscricaoPagador;
@@ -44,7 +44,7 @@ public class SegmentoQ {
     private String cidadePagador;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private String ufPagador;
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private TipoInscricao tipoInscricaoSacadorAvalista;
     @Field(pattern = Pattern.NUMERIC, size = 15)
     private String numeroInscricaoSacadorAvalista;

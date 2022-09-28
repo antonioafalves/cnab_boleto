@@ -1,16 +1,18 @@
 package br.com.orionsoft.cnab.boleto.sicredi.tipo;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 
-@SuppressWarnings("unused")
+@AllArgsConstructor
 @Getter
 public enum AceiteTitulo {
     SIM("S"),
     NAO("N");
 
-    final String value;
+    private final String value;
 
-    AceiteTitulo(String value) {
-        this.value = value;
+    @Override
+    public String toString() {
+        return value;
     }
 }
