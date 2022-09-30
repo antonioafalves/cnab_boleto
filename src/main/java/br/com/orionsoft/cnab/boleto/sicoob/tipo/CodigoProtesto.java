@@ -7,9 +7,8 @@ import lombok.Getter;
 @Getter
 public enum CodigoProtesto {
     PROTESTAR_DIAS_CORRIDOS("1"),
-    NAO_PROTESTAR_NAO_NEGATIVAR("3"),
-    NEGATIVACAO_SEM_PROTESTO("8"),
-    CANCELAMENTO_PROTESTO_NEGATIVACAO_AUTOMATICA("9");
+    NAO_PROTESTAR("3"),
+    CANCELAMENTO_INSTRUCAO_PROTESTO("9");
 
     private final String value;
 

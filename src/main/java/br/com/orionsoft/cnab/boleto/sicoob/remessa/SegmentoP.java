@@ -4,11 +4,14 @@ import br.com.orionsoft.cnab.boleto.sicoob.tipo.*;
 import br.com.orionsoft.cnab.core.Pattern;
 import br.com.orionsoft.cnab.core.annotation.Field;
 import br.com.orionsoft.cnab.core.annotation.Record;
+import br.com.orionsoft.cnab.core.annotation.SubRecord;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Record
 @Getter
@@ -40,12 +43,12 @@ public class SegmentoP {
     private final String dv = "";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 20)
     private String nossoNumero;
-    @Field(pattern = Pattern.NUMERIC, size = 1)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private String carteira;
     @Field(pattern = Pattern.NUMERIC, size = 1)
     private final String cadastramento = "0";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
-    private final String documento = "";
+    private final String documento = " ";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private EmissaoBoleto emissaoBoleto;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
@@ -59,7 +62,7 @@ public class SegmentoP {
     @Field(pattern = Pattern.NUMERIC, size = 5)
     private final String agenciaCobradora = "00000";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
-    private final String dvAgenciaCobradora = "";
+    private final String dvAgenciaCobradora = " ";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
     private EspecieTitulo especieTitulo;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
@@ -98,4 +101,10 @@ public class SegmentoP {
     private final String numeroContrato = "0000000000";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String cnab2 = "";
+    @SubRecord
+    private SegmentoQ segmentoQ;
+    @SubRecord
+    private SegmentoR segmentoR;
+    @SubRecord
+    private SegmentoS segmentoS;
 }

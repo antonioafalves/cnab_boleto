@@ -14,9 +14,6 @@ public class Remessa extends File {
     private HeaderArquivo headerArquivo;
     private HeaderLote headerLote;
     private List<SegmentoP> segmentosP = new ArrayList<>();
-    private List<SegmentoQ> segmentosQ = new ArrayList<>();
-    private List<SegmentoR> segmentosR = new ArrayList<>();
-    private List<SegmentoS> segmentosS = new ArrayList<>();
     private TraillerLote traillerLote;
     private TraillerArquivo traillerArquivo;
 }
