@@ -54,7 +54,7 @@ public class SegmentoP {
     private String numeroDocumento;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate vencimento;
-    @Field(pattern = Pattern.DECIMAL, size = 13)
+    @Field(pattern = Pattern.DECIMAL, size = 15)
     private BigDecimal valorTitulo;
     @Field(pattern = Pattern.NUMERIC, size = 5)
     private final String agenciaCobradora = "00000";
@@ -70,17 +70,17 @@ public class SegmentoP {
     private CodigoJurosMora codigoJurosMora;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataJurosMora;
-    @Field(pattern = Pattern.DECIMAL, size = 13)
+    @Field(pattern = Pattern.DECIMAL, size = 15)
     private BigDecimal jurosMora;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private CodigoDesconto codigoDesconto1;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataDesconto1;
-    @Field(pattern = Pattern.DECIMAL, size = 13)
+    @Field(pattern = Pattern.DECIMAL, size = 15)
     private BigDecimal valorDesconto1;
-    @Field(pattern = Pattern.DECIMAL, size = 13)
+    @Field(pattern = Pattern.DECIMAL, size = 15)
     private BigDecimal valorIOF;
-    @Field(pattern = Pattern.DECIMAL, size = 13)
+    @Field(pattern = Pattern.DECIMAL, size = 15)
     private BigDecimal valorAbatimento;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 25)
     private String usoEmpresaBeneficiario;

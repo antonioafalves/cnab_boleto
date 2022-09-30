@@ -24,19 +24,19 @@ public class TraillerLote {
     private Integer quantidadeRegistro;
     @Field(pattern = Pattern.NUMERIC, size =  6)
     private Integer qtdTituloCobrancaSimples;
-    @Field(pattern = Pattern.DECIMAL, size =  15)
+    @Field(pattern = Pattern.DECIMAL, size =  17)
     private BigDecimal valorTituloCobrancaSimples;
     @Field(pattern = Pattern.NUMERIC, size =  6)
     private Integer qtdTituloCobrancaVinculada;
-    @Field(pattern = Pattern.DECIMAL, size =  15)
+    @Field(pattern = Pattern.DECIMAL, size =  17)
     private BigDecimal valorTituloCobrancaVinculada;
     @Field(pattern = Pattern.NUMERIC, size =  6)
     private Integer qtdTituloCobrancaCaucionada;
-    @Field(pattern = Pattern.DECIMAL, size =  15)
+    @Field(pattern = Pattern.DECIMAL, size =  17)
     private BigDecimal valorTituloCobrancaCaucionada;
     @Field(pattern = Pattern.NUMERIC, size =  6)
     private Integer qtdTituloCobrancaDescontada;
-    @Field(pattern = Pattern.DECIMAL, size =  15)
+    @Field(pattern = Pattern.DECIMAL, size =  17)
     private BigDecimal valorTituloCobrancaDescontada;
     @Field(pattern = Pattern.ALPHANUMERIC, size =  8)
     private final String numeroAviso = "";

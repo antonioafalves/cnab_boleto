@@ -36,6 +36,8 @@ public class HeaderArquivo {
     private String numeroConta;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private String dvConta;
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
+    private final String dvAgenciaConta = "0";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 30)
     private String nomeEmpresa;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 30)

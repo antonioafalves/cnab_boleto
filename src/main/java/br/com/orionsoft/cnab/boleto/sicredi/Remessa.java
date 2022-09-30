@@ -14,14 +14,6 @@ import java.util.List;
 @Setter
 public class Remessa extends File {
     private Header header;
-    private List<Detalhe> detalhes;
+    private List<Detalhe> detalhes = new ArrayList<>();
     private Trailer trailer;
-
-
-    public List<Detalhe> getDetalhes() {
-        if (detalhes == null) {
-            detalhes = new ArrayList<>();
-        }
-        return detalhes;
-    }
 }

@@ -5,6 +5,7 @@ import br.com.orionsoft.cnab.core.File;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -12,10 +13,10 @@ import java.util.List;
 public class Remessa extends File {
     private HeaderArquivo headerArquivo;
     private HeaderLote headerLote;
-    private List<SegmentoP> segmentosP;
-    private List<SegmentoQ> segmentosQ;
-    private List<SegmentoR> segmentosR;
-    private List<SegmentoS> segmentosS;
+    private List<SegmentoP> segmentosP = new ArrayList<>();
+    private List<SegmentoQ> segmentosQ = new ArrayList<>();
+    private List<SegmentoR> segmentosR = new ArrayList<>();
+    private List<SegmentoS> segmentosS = new ArrayList<>();
     private TraillerLote traillerLote;
     private TraillerArquivo traillerArquivo;
 }

@@ -34,19 +34,19 @@ public class SegmentoR {
     private CodigoDesconto codigoDesconto2;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataDesconto2;
-    @Field(pattern = Pattern.DECIMAL, size = 13)
+    @Field(pattern = Pattern.DECIMAL, size = 15)
     private BigDecimal valorDesconto2;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private CodigoDesconto codigoDesconto3;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataDesconto3;
-    @Field(pattern = Pattern.DECIMAL, size = 13)
+    @Field(pattern = Pattern.DECIMAL, size = 15)
     private BigDecimal valorDesconto3;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private CodigoMulta codigoMulta;
     @Field(pattern = Pattern.DATE_DDMMAAAA, size = 8)
     private LocalDate dataMulta;
-    @Field(pattern = Pattern.DECIMAL, size = 13)
+    @Field(pattern = Pattern.DECIMAL, size = 15)
     private BigDecimal valorMulta;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 10)
     private final String informacaoAoPagador = "";

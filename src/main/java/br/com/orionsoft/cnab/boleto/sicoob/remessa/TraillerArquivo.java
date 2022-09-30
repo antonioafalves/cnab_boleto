@@ -23,7 +23,7 @@ public class TraillerArquivo {
     @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer quantidadeRegistros;
     @Field(pattern = Pattern.NUMERIC, size = 6)
-    private Integer quantidadeContas;
+    private final String quantidadeContas = "000000";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 205)
     private final String cnab2 = "";
 }
