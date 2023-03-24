@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum TipoPessoa {
+public enum TipoInscricao {
     PESSOA_FISICA("1"),
     PESSOA_JURIDICA("2");
 

@@ -25,7 +25,11 @@ public class Detalhe {
     private final String tipoCarteira = "A";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private TipoImpressao tipoImpressao;
-    @Field(pattern = Pattern.ALPHANUMERIC, size = 12)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
+    private final String filler0 = "";
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
+    private final String tipoBoleto = "H";
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 10)
     private final String filler1 = "";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String tipoMoeda = "A";
@@ -48,7 +52,7 @@ public class Detalhe {
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String filler4 = "";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
-    private EmissaoBloqueto emissaoBloqueto;
+    private ImpressaoBoleto impressaoBoleto;
     @Field(pattern = Pattern.NUMERIC, size = 2)
     private Integer numeroParcelaCarne;
     @Field(pattern = Pattern.NUMERIC, size = 2)
@@ -87,34 +91,38 @@ public class Detalhe {
     private LocalDate dataLimiteConcessaoDesconto;
     @Field(pattern = Pattern.DECIMAL, size = 13)
     private BigDecimal valorDesconto;
-    @Field(pattern = Pattern.NUMERIC, size = 13)
+    @Field(pattern = Pattern.ALPHANUMERIC, size = 2)
+    private final String instrucaoNegativacao = "00";
+    @Field(pattern = Pattern.NUMERIC, size = 2)
+    private final Integer numeroDiasNegativacao = 0;
+    @Field(pattern = Pattern.NUMERIC, size = 9)
     private final Integer filler8 = 0;
     @Field(pattern = Pattern.DECIMAL, size = 13)
     private BigDecimal valorAbatimento;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
-    private TipoPessoa tipoPessoa;
+    private TipoInscricao tipoInscricao;
     @Field(pattern = Pattern.NUMERIC, size = 1)
     private final Integer filler9 = 0;
     @Field(pattern = Pattern.NUMERIC, size = 14)
-    private String cpfCnpjSacado;
+    private String cpfCnpjPagador;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 40)
-    private String nomeSacado;
+    private String nomePagador;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 40)
-    private String enderecoSacado;
+    private String enderecoPagador;
     @Field(pattern = Pattern.NUMERIC, size = 5)
-    private final Integer codigoSacadoCooperativaCedente = 0; // não cadastrar o sacado
+    private final Integer codigoPagadorCooperativaCedente = 0; // não cadastrar o sacado
     @Field(pattern = Pattern.NUMERIC, size = 6)
     private final Integer filler10 = 0;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 1)
     private final String filler11 = "";
     @Field(pattern = Pattern.ALPHANUMERIC, size = 8)
-    private String cepSacado;
+    private String cepPagador;
     @Field(pattern = Pattern.NUMERIC, size = 5)
-    private final Integer codigoSacadoJuntoCliente = 0;
+    private final Integer codigoPagadorJuntoCliente = 0;
     @Field(pattern = Pattern.NUMERIC, size = 14)
-    private Integer cpfCnpjSacadorAvalista;
+    private Integer cpfCnpjBenefFinal;
     @Field(pattern = Pattern.ALPHANUMERIC, size = 41)
-    private String nomeSacadorAvalista;
+    private String nomeBenefFinal;
     @Field(pattern = Pattern.NUMERIC, size = 6)
     private Integer numeroSequencialRegistro;
 

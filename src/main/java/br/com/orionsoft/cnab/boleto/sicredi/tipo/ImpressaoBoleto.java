@@ -5,7 +5,7 @@ import lombok.Getter;
 
 @AllArgsConstructor
 @Getter
-public enum EmissaoBloqueto {
+public enum ImpressaoBoleto {
     SICREDI("A"),
     CEDENTE("B");
 

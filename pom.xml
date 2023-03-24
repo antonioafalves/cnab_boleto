@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>br.com.orionsoft</groupId>
     <artifactId>cnab_boleto</artifactId>
-    <version>1.2.3</version>
+    <version>1.3.0</version>
     <name>cnab_boleto</name>
     <description>CNAB Boleto</description>
     <properties>
@@ -21,7 +21,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>1.18.26</version>
         </dependency>
 
         <dependency>
