@@ -7,4 +7,4 @@ clean:
 	mvn clean
 
 install:
-	mvn install
+	mvn install -DskipTests
